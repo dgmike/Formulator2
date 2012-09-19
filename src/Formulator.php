@@ -4,7 +4,8 @@ namespace Formulator;
 use Formulator\Config as Config;
 use Formulator\Form as Form;
 
-require_once __DIR__ . 'Config.php';
+require_once __DIR__ . '/Config.php';
+require_once __DIR__ . '/Form.php';
 
 /**
  * Formulator Base Class
