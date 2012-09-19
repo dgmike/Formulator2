@@ -3,4 +3,5 @@
 *.pyo
 .project
 .settings
+.externalToolBuilders
 output
