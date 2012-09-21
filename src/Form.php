@@ -19,10 +19,21 @@ class Form
         'action'  => '',
         'enctype' => self::ENCTYPE_URLENCODED, 
     );
-    
-    public function __construct()
+
+    public function __construct(array $config = null)
     {
-        // @TODO
+        if (isset($config['upload']) && $config['upload']) {
+            $this->setUpload();
+        }
+        if (isset($config['method'])) {
+            $this->setMethod($config['method']);
+        }
+        if (isset($config['action'])) {
+            $this->setAction($config['action']);
+        }
+        if (isset($config['enctype'])) {
+            $this->setEnctype($config['enctype']);
+        }
     }
     
     static public function constants($filter = null)
