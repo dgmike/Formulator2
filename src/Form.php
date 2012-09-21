@@ -53,6 +53,18 @@ class Form
         return $converted;
     }
 
+    public function setMethod($method)
+    {
+        $this->setPost($method == self::METHOD_POST);
+        return $this;
+    }
+
+    public function setAction($action)
+    {
+        $this->attriutes['action'] = $action;
+        return $this;
+    }
+
     public function setPost($mustBePost)
     {
         $method = ((bool) $mustBePost ? self::METHOD_POST : self::METHOD_GET);
